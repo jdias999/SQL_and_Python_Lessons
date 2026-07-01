@@ -39,3 +39,4 @@ SELECT
 FROM salaries
 ORDER BY standardized_salary DESC
 LIMIT 10;
+
