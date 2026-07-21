@@ -81,7 +81,7 @@ USING src_priority_jobs AS src
 ON tgt.job_id = src.job_id
 
 WHEN MATCHED AND tgt.priority_lvl IS DISTINCT FROM src.priority_lvl THEN
-    UPDATE 
+    UPDATE SET
         priority_lvl = src.priority_lvl,
         update_at = src.update_at
 WHEN NOT MATCHED THEN  --aqui, nao precisaremos usar o where not exist, o merge faz isso de forma automática!!
